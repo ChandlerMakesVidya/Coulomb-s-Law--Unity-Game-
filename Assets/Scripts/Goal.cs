@@ -1,0 +1,16 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Goal : MonoBehaviour
+{
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //print("along came a spidey, sat down besidey");
+        if(collision.gameObject.tag == "Charge")
+        {
+            //print("and he said 'hey whats in the bowl bitch'");
+            GameManager.gameState = GameManager.GameState.BeatLevel;
+        }
+    }
+}
